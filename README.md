@@ -2,12 +2,12 @@
 
 Fortress stands as an extension of Spring Security, streamlining the development of secure web applications by offering essential security elements, allowing you to concentrate on your core business concept. Right out of the box, Fortress furnishes you with:
 
-1. JWT Authentication:
+- JWT Authentication:
    - Token management intricacies are handled by Fortress, relieving you of the burden.
 
-2. Role-based Access Control
+- Role-based Access Control
 
-3. Management of User Accounts.  
+- Management of User Accounts.  
 
    Via the Fortress Account Management web interface, administrators can:
    - Create new user accounts
@@ -19,15 +19,15 @@ Fortress stands as an extension of Spring Security, streamlining the development
    
    Fortress enforces a default username and password policy, while also allowing for your tailored implementation.
 
-4. Token-based password reset for users
+- Token-based password reset for users
 
-5. Out-of-the-box provisions for login, password reset, and navigation bar UI components
+- Out-of-the-box provisions for login, password reset, and navigation bar UI components
 
-6. Smooth error propagation to the frontend
+- Smooth error propagation to the frontend
 
-7. Abstract CRUD controller and service classes for simplifying CRUD operations, adhering to the DTO design pattern
+- Abstract CRUD controller and service classes for simplifying CRUD operations, adhering to the DTO design pattern
 
-8. Extensive customization capabilities
+- Extensive customization capabilities
 
 # Getting Started with Fortress
 
