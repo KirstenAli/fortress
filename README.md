@@ -1,3 +1,5 @@
+# Fortress
+
 Fortress stands as an extension of Spring Security, streamlining the development of secure web applications by offering essential security elements, allowing you to concentrate on your core business concept. Right out of the box, Fortress furnishes you with:
 
 1. JWT Authentication:
@@ -342,3 +344,18 @@ You can access Fortress's default User Management interface from the following e
 ![reset_password_warning](uploads/cbb7441fcd95db4bbbd18bd4cf8cb030/reset_password_warning.png)
 
 # UI Components Provided by Fortress
+
+## Login Modal 
+![login_modal](uploads/dcc47a16741214eeda5ae4024bf80e9b/login_modal.png)
+
+## Reset Password Modal 
+![reset_password_modal](uploads/adfaea646f2704725ebd183cb0ccf713/reset_password_modal.png)
+
+## Change Password Modal 
+![change_password_modal](uploads/86c31aeda46dff198575da449cb16fe9/change_password_modal.png)
+
+## Navbar
+![navbar](uploads/a03cd567c313c342bd274e6dde8c27d6/navbar.png)
+
+## Message Modal
+![message_modal](uploads/078f3317c24bf071b1c8c0014b41f6b5/message_modal.png)
