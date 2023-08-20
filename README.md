@@ -7,7 +7,7 @@ Fortress stands as an extension of Spring Security, streamlining the development
 
 - Role-based Access Control
 
-- Management of User Accounts.  
+- User Account Management  
 
    Via the Fortress Account Management web interface, administrators can:
    - Create new user accounts
