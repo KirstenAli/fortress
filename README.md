@@ -21,8 +21,6 @@ Fortress stands as an extension of Spring Security, streamlining the development
 
 - Token-based password reset for users
 
-- Out-of-the-box provisions for login, password reset, and navigation bar UI components
-
 - Smooth error propagation to the frontend
 
 - Abstract CRUD controller and service classes for simplifying CRUD operations, adhering to the DTO design pattern
