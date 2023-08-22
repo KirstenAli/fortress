@@ -334,25 +334,25 @@ You can access Fortress's default User Management interface from the following e
 /admin/login OR
 /admin/dashboard
 
-![user_management](uploads/4411cc4edca3355022ed2bbfdd51b2e5/user_management.png)
+![user management](https://github.com/KirstenAli/fortress/assets/86775811/a973b700-be4d-412f-b20b-a350bda8f70f)
 
-![edit_user](uploads/c72619a54e632e8e3133309a17a82fa3/edit_user.png)
+![edit user](https://github.com/KirstenAli/fortress/assets/86775811/2675d30d-4ed1-4c64-951b-69b933c9de5c)
 
-![reset_password_warning](uploads/cbb7441fcd95db4bbbd18bd4cf8cb030/reset_password_warning.png)
+![reset password warning](https://github.com/KirstenAli/fortress/assets/86775811/ca8bbbb2-04c2-4905-a2be-980235da9f9e)
 
 # UI Components Provided by Fortress
 
 ## Login Modal 
-![login_modal](uploads/dcc47a16741214eeda5ae4024bf80e9b/login_modal.png)
+![login modal](https://github.com/KirstenAli/fortress/assets/86775811/b6b63e77-0c45-444c-8daf-d40b756c0efb)
 
 ## Reset Password Modal 
-![reset_password_modal](uploads/adfaea646f2704725ebd183cb0ccf713/reset_password_modal.png)
+![reset password modal](https://github.com/KirstenAli/fortress/assets/86775811/f4d3a9ef-cc39-4ad9-9878-d4f314306978)
 
 ## Change Password Modal 
-![change_password_modal](uploads/86c31aeda46dff198575da449cb16fe9/change_password_modal.png)
+![change password modal](https://github.com/KirstenAli/fortress/assets/86775811/deb5493d-b7fd-4dcd-a11c-09eb01b0fd4b)
 
 ## Navbar
-![navbar](uploads/a03cd567c313c342bd274e6dde8c27d6/navbar.png)
+![navbar](https://github.com/KirstenAli/fortress/assets/86775811/b97d9211-f6f9-44a5-a168-50e423010136)
 
 ## Message Modal
-![message_modal](uploads/078f3317c24bf071b1c8c0014b41f6b5/message_modal.png)
+![message modal](https://github.com/KirstenAli/fortress/assets/86775811/d7cb6cf2-ee43-4816-925c-72df57b1d37b)
