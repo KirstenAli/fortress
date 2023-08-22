@@ -53,7 +53,6 @@ We need to notify the Spring Framework about our utilization of Fortress's Contr
 
 `@EnableMongoRepositories(basePackages ={"com.fortress.security", "com.yourGroup.yourProject"})`
 
-These annotations will effectively instruct Spring on the specific packages from both Fortress and your project that need to be scanned and utilized.
 
 ## Step 3: Configure Your application.properties:
 
