@@ -31,14 +31,17 @@ Fortress stands as an extension of Spring Security, streamlining the development
 
 ## Step 1: Dependencies 
 
-We need three dependencies in our build.gradle:
+We need four dependencies in our build.gradle:
 - Spring Security 
-- Thymeleaf 
+- Thymeleaf
+- Java Mail Sender
 - Fortress 
 
 `implementation 'org.springframework.boot:spring-boot-starter-security'`
 
 `implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'`
+
+`'org.springframework.boot:spring-boot-starter-mail'`
 
 Since Fortress is a module in our project we can simply do
 
