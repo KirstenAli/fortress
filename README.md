@@ -44,7 +44,6 @@ Since Fortress is a module in our project we can simply do
 
 `implementation project(':security')`
 
-
 ## Step 2: Define Component Scanning
 
 We need to notify the Spring Framework about our utilization of Fortress's Controllers, Services, Repositories, and other essential components. To achieve this, introduce the subsequent annotations at the class level within a configuration or main class:
@@ -52,7 +51,6 @@ We need to notify the Spring Framework about our utilization of Fortress's Contr
 `@ComponentScan(basePackages = {"com.fortress.security", "com.yourGroup.yourProject"})`
 
 `@EnableMongoRepositories(basePackages ={"com.fortress.security", "com.yourGroup.yourProject"})`
-
 
 ## Step 3: Configure Your application.properties:
 
@@ -334,25 +332,25 @@ You can access Fortress's default User Management interface from the following e
 /admin/login OR
 /admin/dashboard
 
-![user management](https://github.com/KirstenAli/fortress/assets/86775811/a973b700-be4d-412f-b20b-a350bda8f70f)
+![user management](https://github.com/KirstenAli/fortress/assets/86775811/c38672e7-7895-40af-ad01-dbf554bfa0bd)
 
-![edit user](https://github.com/KirstenAli/fortress/assets/86775811/2675d30d-4ed1-4c64-951b-69b933c9de5c)
+![edit user](https://github.com/KirstenAli/fortress/assets/86775811/3dbc9384-e89c-483d-8396-b22d490f907e)
 
-![reset password warning](https://github.com/KirstenAli/fortress/assets/86775811/ca8bbbb2-04c2-4905-a2be-980235da9f9e)
+![reset password warning](https://github.com/KirstenAli/fortress/assets/86775811/8dc97d4d-3de7-4c57-bf14-3eaa007c4ee5)
 
 # UI Components Provided by Fortress
 
 ## Login Modal 
-![login modal](https://github.com/KirstenAli/fortress/assets/86775811/b6b63e77-0c45-444c-8daf-d40b756c0efb)
+![login modal](https://github.com/KirstenAli/fortress/assets/86775811/8ac25862-7378-4d87-948f-3e19714d5ca4)
 
 ## Reset Password Modal 
-![reset password modal](https://github.com/KirstenAli/fortress/assets/86775811/f4d3a9ef-cc39-4ad9-9878-d4f314306978)
+![reset password modal](https://github.com/KirstenAli/fortress/assets/86775811/ee75a635-03cb-45de-b777-a098f51632cb)
 
 ## Change Password Modal 
-![change password modal](https://github.com/KirstenAli/fortress/assets/86775811/deb5493d-b7fd-4dcd-a11c-09eb01b0fd4b)
+![change password modal](https://github.com/KirstenAli/fortress/assets/86775811/6715b9e5-65ef-48b2-ac74-cf4efedbf6a8)
 
 ## Navbar
-![navbar](https://github.com/KirstenAli/fortress/assets/86775811/b97d9211-f6f9-44a5-a168-50e423010136)
+![navbar](https://github.com/KirstenAli/fortress/assets/86775811/c4003bb3-df16-4a30-a0dd-24120f30fdde)
 
 ## Message Modal
-![message modal](https://github.com/KirstenAli/fortress/assets/86775811/d7cb6cf2-ee43-4816-925c-72df57b1d37b)
+![message modal](https://github.com/KirstenAli/fortress/assets/86775811/31a72d0a-5d14-4c8e-8bd3-2c0da7242dc1)
