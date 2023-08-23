@@ -125,7 +125,7 @@ HttpSecurity http) {
 
 ## Accessing the JWT 
 
-After configuring Fortress, it becomes necessary to include a JSON Web Token (JWT) in the request header when attempting to access secure endpoints. The issuing, storing, and validating of the JWT is seamlessly handled by Fortress in the background. You can access and utilize the JWT as follows:
+After configuring Fortress, it becomes necessary to include a JSON Web Token (JWT) in the request header when attempting to access secure endpoints. The issuing, storing, and validation of the JWT is seamlessly handled by Fortress in the background. You can access and utilize the JWT as follows:
 
 ```javascript
 const token = localStorage.getItem('access_token');
