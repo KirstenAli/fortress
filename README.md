@@ -82,7 +82,7 @@ You must define two public endpoints as follows:
 
 ```java
 @Controller
-@RequestMapping("/testPage")
+@RequestMapping("/myWebPage")
 public class TestController {
 
     @GetMapping("/login")
