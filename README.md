@@ -82,17 +82,17 @@ You must define two public endpoints as follows:
 
 ```java
 @Controller
-@RequestMapping("/test")
+@RequestMapping("/testPage")
 public class TestController {
 
     @GetMapping("/login")
     ModelAndView login(){
         return new ModelAndView("login",
                 "redirect",
-                "myWebPage"); //replace with the name of your web page
+                "view");
     }
 
-    @GetMapping("/myWebPage") //replace with the name of your web page
+    @GetMapping("/view")
     String testPage(){
         return "myWebPage"; //replace with the name of your web page
     }
