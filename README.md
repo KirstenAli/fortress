@@ -107,7 +107,7 @@ public void configure(AuthorizeHttpRequestsConfigurer<HttpSecurity>.Authorizatio
 HttpSecurity http) {
         authz.requestMatchers("/myWebPage/*")
                 .permitAll()
-                .requestMatchers("/secure/**")   //endpoint you wish to secure
+                .requestMatchers("/secure/**") //endpoint you wish to secure
                 .hasAuthority(Role.ADMIN.toString())
                 .anyRequest()
                 .authenticated();
