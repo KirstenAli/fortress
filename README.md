@@ -105,7 +105,7 @@ public class SecurityConfiguration extends FortressConfiguration {
 @Override
 public void configure(AuthorizeHttpRequestsConfigurer<HttpSecurity>.AuthorizationManagerRequestMatcherRegistry authz,
 HttpSecurity http) {
-        authz.requestMatchers("/test/**")
+        authz.requestMatchers("/myWebPage/*")
                 .permitAll()
                 .requestMatchers("/secure/**")
                 .hasAuthority(Role.ADMIN.toString())
