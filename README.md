@@ -48,9 +48,9 @@ Since Fortress is a module in our project we can simply do
 
 We need to notify the Spring Framework about our utilization of Fortress's Controllers, Services, Repositories, and other essential components. To achieve this, introduce the subsequent annotations at the class level within a configuration or main class:
 
-`@ComponentScan(basePackages = {"com.fortress.security", "com.yourGroup.yourProject"})`
+`@ComponentScan(basePackages = {"com.fortress", "com.yourGroup.yourProject"})`
 
-`@EnableMongoRepositories(basePackages ={"com.fortress.security", "com.yourGroup.yourProject"})`
+`@EnableMongoRepositories(basePackages ={"com.fortress", "com.yourGroup.yourProject"})`
 
 ## Step 3: Configure Your application.properties:
 
