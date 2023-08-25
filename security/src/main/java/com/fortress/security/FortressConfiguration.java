@@ -34,13 +34,13 @@ public abstract class FortressConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(authzConfig(http))
-                .userDetailsService(userService)
+        http.userDetailsService(userService)
                 .sessionManagement(config -> config
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class)
                 .exceptionHandling(config -> config.authenticationEntryPoint(getAuthenticationEntryPoint()))
-                .csrf(AbstractHttpConfigurer::disable);
+                .csrf(AbstractHttpConfigurer::disable)
+                .authorizeHttpRequests(authzConfig(http));
 
         return http.build();
     }
