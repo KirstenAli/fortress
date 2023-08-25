@@ -20,7 +20,7 @@ public abstract class FortressConfiguration {
     private UserService userService;
     @Autowired
     private JwtTokenFilter jwtTokenFilter;
-    private final  String[] whitelist = {
+    private final String[] whitelist = {
             "/v3/api-docs/**",
             "/swagger-ui/**",
             "swagger-ui.html",
