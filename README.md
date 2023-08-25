@@ -86,7 +86,7 @@ You must extend the FortressController class and define a public endpoint as fol
 public class TestController extends FortressController {
 
     @GetMapping("/view")
-    String testPage(){
+    String myWebPage(){
         return "myWebPage"; //replace with the name of your web page
     }
 }
