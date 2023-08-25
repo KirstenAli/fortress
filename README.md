@@ -78,22 +78,15 @@ We need to notify the Spring Framework about our utilization of Fortress's Contr
 
 ## Step 4: Define a Controller for your Web Page:
 
-You must define two public endpoints as follows: 
+You must extend the FortressController class and define a public endpoint as follows: 
 
 ```java
 @Controller
 @RequestMapping("/myWebPage")
-public class TestController {
-
-    @GetMapping("/login")
-    ModelAndView login(){
-        return new ModelAndView("login",
-                "redirect",
-                "view");
-    }
+public class TestController extends FortressController {
 
     @GetMapping("/view")
-    String testPage(){
+    String myWebPage(){
         return "myWebPage"; //replace with the name of your web page
     }
 }
@@ -112,9 +105,9 @@ public class SecurityConfiguration extends FortressConfiguration {
 @Override
 public void configure(AuthorizeHttpRequestsConfigurer<HttpSecurity>.AuthorizationManagerRequestMatcherRegistry authz,
 HttpSecurity http) {
-        authz.requestMatchers("/test/**")
+        authz.requestMatchers("/myWebPage/*")
                 .permitAll()
-                .requestMatchers("/secure/**")
+                .requestMatchers("/secure/**") //endpoint you wish to secure
                 .hasAuthority(Role.ADMIN.toString())
                 .anyRequest()
                 .authenticated();
