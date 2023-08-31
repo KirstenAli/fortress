@@ -5,7 +5,7 @@ Fortress stands as an extension of Spring Security, streamlining the development
 - JWT Authentication:
    - Token management intricacies are handled by Fortress, relieving you of the burden.
 
-- Role-based Access Control
+- Role-Based Access Control
 
 - User Account Management  
 
