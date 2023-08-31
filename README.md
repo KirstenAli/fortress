@@ -19,7 +19,7 @@ Fortress stands as an extension of Spring Security, streamlining the development
    
    Fortress enforces a default username and password policy, while also allowing for your tailored implementation.
 
-- Token-based password reset for users
+- Token-based password reset
 
 - Smooth error propagation to the frontend
 
