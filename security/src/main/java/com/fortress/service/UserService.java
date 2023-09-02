@@ -4,6 +4,7 @@ import com.fortress.entity.User;
 import com.fortress.dto.UserDTO;
 import com.fortress.errorhandler.FortressBeacon;
 import com.fortress.repo.UserRepo;
+import com.fortress.security.JwtConfig;
 import com.fortress.utilities.PasswordValidator;
 import com.fortress.utilities.SecureCodeGenerator;
 import com.fortress.utilities.Validator;
@@ -32,15 +33,18 @@ public class UserService extends CRUDService<User, UserDTO> implements UserDetai
     @Value("${password.length}")
     private int passwordLength;
 
+    private final JwtConfig jwtConfig;
+
     public UserService(UserRepo repo, PasswordEncoder passwordEncoder,
                        EmailSender emailSender, Validator emailValidator,
-                       Validator passwordValidator) {
+                       Validator passwordValidator, JwtConfig jwtConfig) {
         super(repo);
         this.repo = repo;
         this.passwordEncoder = passwordEncoder;
         this.emailSender = emailSender;
         this.emailValidator = emailValidator;
         this.passwordValidator = passwordValidator;
+        this.jwtConfig = jwtConfig;
     }
 
     @Override
@@ -56,14 +60,18 @@ public class UserService extends CRUDService<User, UserDTO> implements UserDetai
 
     public void emailSecurePassword(UserDTO userDTO){
         var user = findById(userDTO.getId());
+        var username = user.getUsername();
 
-        var tempPassword = getSecureCode();
+        var tempPassword = jwtConfig
+                .generateAccessToken(username)
+                .getAccessToken();
+
         user.setPassword(tempPassword);
         encodePassword(user);
 
         repo.save(user);
 
-        emailSecureCode(tempPassword, user.getUsername(),
+        emailSecureCode(tempPassword, username,
                 "Temp Password");
     }
 
@@ -159,17 +167,17 @@ public class UserService extends CRUDService<User, UserDTO> implements UserDetai
     }
 
     public void resetPasswordWithToken(UserDTO userDTO){
-        var user = (User) loadUserByUsername(userDTO.getUsername());
-        var actualResetCode = user.getPasswordResetCode();
+
         var claimedResetCode = userDTO.getPasswordResetCode();
 
-        if(actualResetCode.equals(claimedResetCode)){
+        if(jwtConfig.tokenValid(claimedResetCode)){
+
+            var userName = jwtConfig.getSubject(claimedResetCode);
+            var user = (User) loadUserByUsername(userName);
+
             changePasswordWithoutOldPassword(userDTO, user);
             user.setPasswordResetCode(null);
             repo.save(user);
-
-        }else {
-            throw new FortressBeacon("Password reset code invalid");
         }
     }
 

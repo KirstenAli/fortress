@@ -27,18 +27,22 @@ public class JwtConfig {
             parseClaims(token);
             return true;
         }
-        catch (ExpiredJwtException ex){
-            throw new FortressBeacon("Token expired");
+        catch (JwtException ex){
+            throw new FortressBeacon("Token Invalid");
         }
     }
 
     public AuthResponse generateAccessToken(UserDetails userDetails) {
+        return generateAccessToken(userDetails.getUsername());
+    }
+
+    public AuthResponse generateAccessToken(String username) {
         key = Keys.hmacShaKeyFor(getKeyAsBytes(secretKey));
         var issuedAt = System.currentTimeMillis();
         var expiration = issuedAt + expirationTime;
 
         var jtw = Jwts.builder()
-                .setSubject(userDetails.getUsername())
+                .setSubject(username)
                 .setIssuedAt(new Date(issuedAt))
                 .setExpiration(new Date(expiration))
                 .signWith(key, SignatureAlgorithm.HS512)
