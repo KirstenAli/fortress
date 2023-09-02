@@ -5,11 +5,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter @Setter @NoArgsConstructor
-public class AuthResponse {
+public class JWT {
     private String accessToken;
     private Long expiration;
 
-    public AuthResponse(String accessToken, Long expiration) {
+    public JWT(String accessToken, Long expiration) {
         this.accessToken = accessToken;
         this.expiration = expiration;
     }
