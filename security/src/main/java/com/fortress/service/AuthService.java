@@ -1,7 +1,7 @@
 package com.fortress.service;
 
 import com.fortress.dto.AuthRequest;
-import com.fortress.dto.AuthResponse;
+import com.fortress.dto.JWT;
 import com.fortress.errorhandler.FortressBeacon;
 import com.fortress.security.JwtConfig;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -24,7 +24,7 @@ public class AuthService {
         this.jwtConfig = jwtConfig;
     }
 
-    public AuthResponse getToken(AuthRequest authRequest) {
+    public JWT getToken(AuthRequest authRequest) {
         var username = authRequest.getUsername();
         try {
             authenticationManager.authenticate(

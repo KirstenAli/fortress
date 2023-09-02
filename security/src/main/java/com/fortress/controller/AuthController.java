@@ -1,7 +1,7 @@
 package com.fortress.controller;
 
 import com.fortress.dto.AuthRequest;
-import com.fortress.dto.AuthResponse;
+import com.fortress.dto.JWT;
 import com.fortress.service.AuthService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class AuthController {
     }
 
     @PostMapping("/getToken")
-    public ResponseEntity<AuthResponse> getToken(@RequestBody AuthRequest request) {
+    public ResponseEntity<JWT> getToken(@RequestBody AuthRequest request) {
         var tokenResponse = authService.getToken(request);
         return ResponseEntity.status(HttpStatus.OK).body(tokenResponse);
     }

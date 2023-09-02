@@ -1,6 +1,6 @@
 package com.fortress.security;
 
-import com.fortress.dto.AuthResponse;
+import com.fortress.dto.JWT;
 import com.fortress.errorhandler.FortressBeacon;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
@@ -32,11 +32,11 @@ public class JwtConfig {
         }
     }
 
-    public AuthResponse generateAccessToken(UserDetails userDetails) {
+    public JWT generateAccessToken(UserDetails userDetails) {
         return generateAccessToken(userDetails.getUsername());
     }
 
-    public AuthResponse generateAccessToken(String username) {
+    public JWT generateAccessToken(String username) {
         key = Keys.hmacShaKeyFor(getKeyAsBytes(secretKey));
         var issuedAt = System.currentTimeMillis();
         var expiration = issuedAt + expirationTime;
@@ -48,7 +48,7 @@ public class JwtConfig {
                 .signWith(key, SignatureAlgorithm.HS512)
                 .compact();
 
-        return new AuthResponse(jtw, expiration);
+        return new JWT(jtw, expiration);
     }
 
     public String getSubject(String token) {
