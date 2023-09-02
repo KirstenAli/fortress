@@ -28,7 +28,7 @@ public class User implements UserDetails, EntityInterface{
     private String name;
     @NotNull
     private String password;
-    private String passwordResetCode;
+
     @NotNull
     private Role role;
 

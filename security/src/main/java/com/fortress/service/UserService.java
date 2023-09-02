@@ -60,18 +60,14 @@ public class UserService extends CRUDService<User, UserDTO> implements UserDetai
 
     public void emailSecurePassword(UserDTO userDTO){
         var user = findById(userDTO.getId());
-        var username = user.getUsername();
 
-        var tempPassword = jwtConfig
-                .generateAccessToken(username)
-                .getAccessToken();
-
+        var tempPassword = getSecureCode();
         user.setPassword(tempPassword);
         encodePassword(user);
 
         repo.save(user);
 
-        emailSecureCode(tempPassword, username,
+        emailSecureCode(tempPassword, user.getUsername(),
                 "Temp Password");
     }
 
@@ -176,16 +172,15 @@ public class UserService extends CRUDService<User, UserDTO> implements UserDetai
             var user = (User) loadUserByUsername(userName);
 
             changePasswordWithoutOldPassword(userDTO, user);
-            user.setPasswordResetCode(null);
-            repo.save(user);
         }
     }
 
     public void sendPasswordResetToken(UserDTO userDTO){
         var user = (User) loadUserByUsername(userDTO.getUsername());
-        var passwordRestCode = getSecureCode();
-        user.setPasswordResetCode(passwordRestCode);
-        repo.save(user);
+        var username = user.getUsername();
+        var passwordRestCode = jwtConfig
+                .generateAccessToken(username)
+                .getAccessToken();
 
         emailSecureCode(passwordRestCode, user.getUsername(),
                 "Password Reset Code");
