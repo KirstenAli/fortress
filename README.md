@@ -189,7 +189,8 @@ public class Config{
 
 You can access Fortress's default User Management interface from the following endpoints:
 
-/admin/login OR
+/admin/login
+
 /admin/dashboard
 
 ![user management](https://github.com/KirstenAli/fortress/assets/86775811/c38672e7-7895-40af-ad01-dbf554bfa0bd)
