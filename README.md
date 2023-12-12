@@ -53,28 +53,29 @@ We need to notify the Spring Framework about our utilization of Fortress's Contr
 `@EnableMongoRepositories(basePackages ={"com.fortress", "com.yourGroup.yourProject"})`
 
 ## Step 3: Configure Your application.properties:
+```java
+spring.data.mongodb.uri=
 
-`spring.data.mongodb.uri=`
+spring.data.mongodb.database=
 
-`spring.data.mongodb.database=`
+jwt.secret=
 
-`jwt.secret=`
+jwt.expiration=
 
-`jwt.expiration=`
+password.length = 8
 
-`password.length = 8`
+spring.mail.host=
 
-`spring.mail.host=`
+spring.mail.port=
 
-`spring.mail.port=`
+spring.mail.username=
 
-`spring.mail.username=`
+spring.mail.password=
 
-`spring.mail.password=`
+spring.mail.properties.mail.smtp.auth=true
 
-`spring.mail.properties.mail.smtp.auth=true`
-
-`spring.mail.properties.mail.smtp.starttls.enable=true`
+spring.mail.properties.mail.smtp.starttls.enable=true
+```
 
 ## Step 4: Define a Controller for your Web Page:
 
@@ -184,6 +185,8 @@ public class Config{
     }
 }
 ```
+## User Management interface
+
 You can access Fortress's default User Management interface from the following endpoints:
 
 /admin/login OR
