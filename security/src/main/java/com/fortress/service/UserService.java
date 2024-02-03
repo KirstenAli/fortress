@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Deprecated
 public class UserService extends CRUDService<User, UserDTO> implements UserDetailsService {
 
     private final UserRepo repo;

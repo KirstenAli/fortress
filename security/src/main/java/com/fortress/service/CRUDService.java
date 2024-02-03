@@ -9,6 +9,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Deprecated
 public abstract class CRUDService<T extends EntityInterface, U extends DTOInterface> {
 
     private final MongoRepository<T, String> repository;

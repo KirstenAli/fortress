@@ -2,6 +2,7 @@ package com.fortress.utilities;
 
 import java.util.regex.Pattern;
 
+@Deprecated
 public class PasswordValidator implements Validator {
 
     public static final String passwordPolicy ="Must contain at least one lowercase letter, " +
