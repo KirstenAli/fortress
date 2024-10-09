@@ -1,5 +1,3 @@
-# Warning: Current Version Deprecated
-
 # Fortress
 
 Fortress stands as an extension of Spring Security, streamlining the development of secure RESTful web applications by offering essential security elements, allowing you to concentrate on your core business concept. Right out of the box, Fortress furnishes you with:
